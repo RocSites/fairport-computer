@@ -27,7 +27,8 @@ export function Header() {
     <div className={container}>
       <header className={header}>
         <Link to="/" className={logoCss}>
-          <Logo />
+          <p style={{ margin: "0 8px 0 0", fontWeight: "600", color: "#016cc7" }}>Fairport Computer</p>
+          <Logo/>
         </Link>
         <Navigation className={nav} />
         <Link to="/search" className={searchButton}>

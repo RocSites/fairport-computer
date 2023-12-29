@@ -23,7 +23,7 @@ export const query = graphql`
 function Hero (props) {
   return (
     <div className={container}>
-      <h1 className={intro}>Welcome to the GatsbyJS + Shopify Demo Store.</h1>
+      <h1 className={intro}>Welcome to Fairport Computer - Tagline.</h1>
       {!!process.env.GATSBY_DEMO_STORE && (
         <>
           <p className={callOut}>
@@ -52,6 +52,7 @@ export default function IndexPage({ data }) {
   return (
     <Layout>
       <Hero />
+      <h1 style={{fontSize: "1.5rem", marginLeft: "48px", marginBottom: "16px"}}>Featured Products/Services</h1>
       <ProductListing products={data?.shopifyCollection?.products} />
     </Layout>
   )

@@ -1,5 +1,5 @@
 .cartButton {
-  color: var(--text-color-secondary);
+  color: var(--text-color);
   grid-area: cartButton;
   width: var(--size-input);
   height: var(--size-input);

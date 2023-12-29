@@ -8,6 +8,7 @@
 
 .header {
   display: grid;
+  border: 1px solid red;
   width: 100%;
   padding: var(--size-gap) var(--size-gutter);
   grid-template-columns: var(--size-input) 1fr min-content min-content;
@@ -44,7 +45,9 @@
   width: 100%;
   align-items: center;
   justify-content: center;
-  color: var(--text-color-secondary);
+  color: var(--primary);
+  min-width: 200px;
+  z-index: 9999;
 }
 
 .logo:hover {
@@ -54,6 +57,8 @@
 
 .logo[aria-current="page"] {
   color: var(--primary);
+  min-width: 200px;
+  z-index: 9999;
 }
 
 .nav {
@@ -62,7 +67,7 @@
 }
 
 .searchButton {
-  color: var(--text-color-secondary);
+  color: var(--text-color);
   grid-area: searchButton;
   width: var(--size-input);
   height: var(--size-input);

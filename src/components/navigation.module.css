@@ -1,6 +1,7 @@
 .navStyle {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   align-items: center;
   overflow-x: auto;
   white-space: nowrap;
@@ -12,7 +13,7 @@
   text-decoration: none;
   height: var(--size-input);
   display: flex;
-  color: var(--text-color-secondary);
+  color: var(--text-color);
   align-items: center;
   padding-left: var(--space-md);
   padding-right: var(--space-md);
