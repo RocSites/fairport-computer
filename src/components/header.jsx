@@ -14,7 +14,8 @@ import {
   nav,
   subHeader,
   subHeaderText,
-  subHeaderScroll
+  subHeaderScroll,
+  subHeaderTextScroll
 } from "./header.module.css"
 
 export function Header() {
@@ -53,8 +54,8 @@ export function Header() {
     <div className={container}>
       <header className={header}>
         <Link to="/" className={logoCss}>
-          <p style={{ margin: "0 8px 0 0", fontWeight: "600", color: "#016cc7" }}>Fairport Computer</p>
           <Logo />
+          <p style={{fontWeight: "600", color: "#ffffff" }}>Fairport Computer</p>
         </Link>
         <Navigation className={nav} />
         <Link to="/search" className={searchButton}>
@@ -63,7 +64,7 @@ export function Header() {
         <CartButton quantity={quantity} />
       </header>
       <div className={navbarScroll ? subHeaderScroll : subHeader}>
-        <p className={subHeaderText}>Black Friday sale is happening now. Shop Now.</p>
+        <p className={navbarScroll ? subHeaderTextScroll : subHeaderText}>Black Friday sale is happening now. Shop Now.</p>
       </div>
       <Toast show={loading || didJustAddToCart}>
         {!didJustAddToCart ? (

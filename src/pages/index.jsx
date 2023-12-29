@@ -2,6 +2,7 @@ import * as React from "react"
 import { graphql } from "gatsby"
 import { Layout } from "../components/layout"
 import { ProductListing } from "../components/product-listing"
+import { ProductTypeSection } from "../components/product-type-section"
 import { Seo } from "../components/seo"
 import {
   container,
@@ -18,32 +19,21 @@ export const query = graphql`
         ...ProductCard
       }
     }
+    allShopifyProduct(filter: {}) {
+    edges {
+      node {
+        ...ProductCard
+        productType
+      }
+    }
+    productTypes: distinct(field: {productType: SELECT})
+  }
   }
 `
-function Hero (props) {
+function Hero(props) {
   return (
     <div className={container}>
       <h1 className={intro}>Welcome to Fairport Computer - Tagline.</h1>
-      {!!process.env.GATSBY_DEMO_STORE && (
-        <>
-          <p className={callOut}>
-            It's a proof-of-concept in a box, with 10k products and 30k variants
-            to help you get to proof-of-concept as soon as right now.
-          </p>
-          <p className={callToAction}>
-            Hook it up to your own Shopify store data and start customizing in
-            minutes by deploying it to Gatsby Cloud for free. Grab your Shopify
-            store credentials and
-            <a href="https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-shopify&utm_campaign=shopify-starter">
-              <img
-                src="https://www.gatsbyjs.com/deploynow.png"
-                alt="Deploy to Gatsby Cloud"
-                className={deployButton}
-              />
-            </a>
-          </p>
-        </>
-      )}
     </div>
   )
 }
@@ -52,9 +42,17 @@ export default function IndexPage({ data }) {
   return (
     <Layout>
       <Hero />
-      <h1 style={{fontSize: "1.5rem", marginLeft: "48px", marginBottom: "16px"}}>Featured Products/Services</h1>
-      <div style={{minHeight: "50vh"}}>background picture or featured content goes here</div>
+      <h1 style={{ fontSize: "1.5rem", marginLeft: "48px", marginBottom: "16px" }}>Featured Products/Services</h1>
+      {/* <div style={{minHeight: "50vh"}}>background picture or featured content goes here</div> */}
       <ProductListing products={data?.shopifyCollection?.products} />
+
+      {/* TODO - refactor to be dynamic like navigation is  */}
+
+      <ProductTypeSection
+        products={data?.allShopifyProduct?.edges.map(obj => obj.node)}
+        filterBy={"Laptops"}
+        productTypes={data?.allShopifyProduct?.productTypes} />
+        
     </Layout>
   )
 }

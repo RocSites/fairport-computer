@@ -4,7 +4,6 @@ import slugify from "@sindresorhus/slugify"
 import { navStyle, navLink, activeLink } from "./navigation.module.css"
 
 export function Navigation({ className }) {
-  //try replacing productType with productCategory
   const {
     allShopifyProduct: { productTypes },
   } = useStaticQuery(graphql`

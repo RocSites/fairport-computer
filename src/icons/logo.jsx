@@ -18,7 +18,7 @@ function Logo(props) {
     //     fill="currentColor"
     //   />
     // </svg>
-    <DevicesIcon />
+    <DevicesIcon style={{margin: "0 8px 0 0"}} />
 
     // display: "flex",
     // width: "50px",

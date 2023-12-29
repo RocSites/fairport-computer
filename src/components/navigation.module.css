@@ -13,14 +13,14 @@
   text-decoration: none;
   height: var(--size-input);
   display: flex;
-  color: var(--text-color);
+  color: var(--text-color-inverted);
   align-items: center;
   padding-left: var(--space-md);
   padding-right: var(--space-md);
 }
 
 .navLink:hover {
-  color: var(--text-color);
+  color: var(--text-color-secondary);
 }
 
 .activeLink,
