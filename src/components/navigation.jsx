@@ -25,7 +25,6 @@ export function Navigation({ className }) {
       >
         All products
       </Link>
-      {console.log(productTypes)}
       {productTypes.map((name) => (
         <Link
           key={name}

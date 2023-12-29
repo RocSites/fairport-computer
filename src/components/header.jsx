@@ -1,4 +1,4 @@
-import * as React from "react"
+import React, { useState, useEffect } from "react"
 import { Link } from "gatsby"
 import { StoreContext } from "../context/store-context"
 import Logo from "../icons/logo"
@@ -12,6 +12,9 @@ import {
   logo as logoCss,
   searchButton,
   nav,
+  subHeader,
+  subHeaderText,
+  subHeaderScroll
 } from "./header.module.css"
 
 export function Header() {
@@ -23,12 +26,35 @@ export function Header() {
     return total + item.quantity
   }, 0)
 
+  //navbar scroll when active state
+  const [navbarScroll, setNavbarScroll] = useState(false)
+
+  //logo scroll when active
+
+  //navbar scroll changeBackground function
+  const changeBackground = () => {
+    if (window.scrollY >= 20) {
+      setNavbarScroll(true)
+    } else {
+      setNavbarScroll(false)
+    }
+  }
+
+  useEffect(() => {
+    changeBackground()
+    // adding the event when scroll change background
+    window.addEventListener("scroll", changeBackground)
+  })
+
+
+
+
   return (
     <div className={container}>
       <header className={header}>
         <Link to="/" className={logoCss}>
           <p style={{ margin: "0 8px 0 0", fontWeight: "600", color: "#016cc7" }}>Fairport Computer</p>
-          <Logo/>
+          <Logo />
         </Link>
         <Navigation className={nav} />
         <Link to="/search" className={searchButton}>
@@ -36,6 +62,9 @@ export function Header() {
         </Link>
         <CartButton quantity={quantity} />
       </header>
+      <div className={navbarScroll ? subHeaderScroll : subHeader}>
+        <p className={subHeaderText}>Black Friday sale is happening now. Shop Now.</p>
+      </div>
       <Toast show={loading || didJustAddToCart}>
         {!didJustAddToCart ? (
           "Updating…"

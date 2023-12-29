@@ -53,6 +53,7 @@ export default function IndexPage({ data }) {
     <Layout>
       <Hero />
       <h1 style={{fontSize: "1.5rem", marginLeft: "48px", marginBottom: "16px"}}>Featured Products/Services</h1>
+      <div style={{minHeight: "50vh"}}>background picture or featured content goes here</div>
       <ProductListing products={data?.shopifyCollection?.products} />
     </Layout>
   )

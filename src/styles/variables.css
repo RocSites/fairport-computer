@@ -5,6 +5,7 @@
     sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
   /* palette */
+  --black: rgba(0,0,0,1);
   --black-fade-5: rgba(0, 0, 0, 0.05);
   --black-fade-40: rgba(0, 0, 0, 0.4);
   --blue: #016cc7;
@@ -58,6 +59,7 @@
   /* colors */
   --primary: var(--blue);
   --background: var(--white);
+  --background-dark: var(--black);
   --border: var(--black-fade-5);
 
   /* transitions */
