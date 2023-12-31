@@ -74,6 +74,7 @@
   --text-color-secondary: var(--grey-50);
   --text-color-inverted: var(--white);
   /* size */
+  --text-display-large: var(var(--text-3xl));
   --text-display: var(--text-2xl);
   --text-prose: var(--text-md);
 
