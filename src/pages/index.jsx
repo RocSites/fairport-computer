@@ -50,12 +50,12 @@ export default function IndexPage({ data }) {
       {/* TODO - refactor to be dynamic like navigation is  */}
       <ProductTypeSection
         products={data?.allShopifyProduct?.edges.map(obj => obj.node)}
-        filterBy={"Laptops"}
+        filterBy={"Laptop"}
         productTypes={data?.allShopifyProduct?.productTypes} 
       />
          <ProductTypeSection
         products={data?.allShopifyProduct?.edges.map(obj => obj.node)}
-        filterBy={"Desktops"}
+        filterBy={"Desktop"}
         productTypes={data?.allShopifyProduct?.productTypes} 
       />
          <ProductTypeSection

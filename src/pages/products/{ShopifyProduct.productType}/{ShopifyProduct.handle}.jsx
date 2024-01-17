@@ -37,10 +37,13 @@ export default function Product({ data: { product, suggestions } }) {
     priceRangeV2,
     title,
     description,
-    images,
+    media,
   } = product
-  const { client } = React.useContext(StoreContext)
 
+
+ const images = media.map(m=>m.preview);
+  
+  const { client } = React.useContext(StoreContext)
   const [variant, setVariant] = React.useState({ ...initialVariant })
   const [quantity, setQuantity] = React.useState(1)
 
@@ -113,20 +116,20 @@ export default function Product({ data: { product, suggestions } }) {
                 aria-describedby="instructions"
               >
                 <ul className={productImageList}>
-                  {images.map((image, index) => (
+                  {images.map((medium, index) => (
                     <li
-                      key={`product-image-${image.id}`}
+                      key={`product-image-${medium.id}`}
                       className={productImageListItem}
                     >
                       <GatsbyImage
                         objectFit="contain"
                         loading={index === 0 ? "eager" : "lazy"}
                         alt={
-                          image.altText
-                            ? image.altText
+                          medium.altText
+                            ? medium.altText
                             : `Product Image of ${title} #${index + 1}`
                         }
-                        image={image.gatsbyImageData}
+                        image={medium.image.gatsbyImageData}
                       />
                     </li>
                   ))}
@@ -210,8 +213,11 @@ export const Head = ({ data: { product } }) => {
   const {
     title,
     description,
-    images: [firstImage],
+    media,
   } = product
+
+  const firstImage = media[0]?.preview.image
+
 
   return (
     <>
@@ -247,10 +253,21 @@ export const query = graphql`
         }
       }
       storefrontId
-      images {
-        # altText
+      # images {
+      #   # altText
+      #   id
+      #   gatsbyImageData(layout: CONSTRAINED, width: 640, aspectRatio: 1)
+      # }
+
+
+      media {
+        preview {
+          image {
+            altText
+            gatsbyImageData(aspectRatio: 1, width: 640)
+          }
+        }
         id
-        gatsbyImageData(layout: CONSTRAINED, width: 640, aspectRatio: 1)
       }
       variants {
         availableForSale
@@ -265,7 +282,7 @@ export const query = graphql`
       options {
         name
         values
-        id
+        shopifyId
       }
     }
     suggestions: allShopifyProduct(

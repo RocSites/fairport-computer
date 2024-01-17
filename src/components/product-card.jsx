@@ -17,10 +17,12 @@ export function ProductCard({ product, eager }) {
     title,
     priceRangeV2,
     slug,
-    images: [firstImage],
+    media,
     vendor,
     storefrontImages,
   } = product
+
+  const firstImage = media[0]?.preview.image
 
   const price = formatPrice(
     priceRangeV2.minVariantPrice.currencyCode,
@@ -83,11 +85,23 @@ export const query = graphql`
     slug: gatsbyPath(
       filePath: "/products/{ShopifyProduct.productType}/{ShopifyProduct.handle}"
     )
-    images {
+    media {
+      preview {
+        image {
+          altText
+          gatsbyImageData(aspectRatio: 1, width: 640)
+
+        }
+      }
       id
-      altText
-      gatsbyImageData(aspectRatio: 1, width: 640)
     }
+    # images {
+    #   id
+    #   altText
+    #   gatsbyImageData(aspectRatio: 1, width: 640)
+    # }
+
+    
     priceRangeV2 {
       minVariantPrice {
         amount
