@@ -40,12 +40,40 @@
   display: none;
 }
 
-@media (max-width: 640px) {
+.drawerLinkWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.list {
+  width: 250px;
+}
+
+.menuIcon {
+  margin: 20px;
+  font-size: 2rem;
+  color: white;
+}
+
+.navButtonMobile {
+  color: black;
+  text-transform: none;
+  margin: 10px 16px;
+  text-decoration: none;
+}
+
+@media (max-width: 850px) {
   .navStyle {
     display: none;
   }
+
   .navLinkMobile {
     display: flex;
   }
 }
- 
+
+@media (max-width: 1100px) {
+  .navStyle {
+    justify-content: flex-end;
+  }
+}

@@ -1,7 +1,16 @@
 import { graphql, useStaticQuery, Link } from "gatsby"
 import React, { useState } from 'react'
 import slugify from "@sindresorhus/slugify"
-import { navStyle, navLink, activeLink, navLinkMobile } from "./navigation.module.css"
+import { 
+  navStyle, 
+  navLink, 
+  activeLink, 
+  navLinkMobile,
+  drawerLinkWrapper,
+  navButtonMobile,
+  list,
+  menuIcon
+} from "./navigation.module.css"
 import Drawer from '@mui/material/Drawer';
 import List from '@mui/material/List';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -47,7 +56,7 @@ export function Navigation({ className }) {
       </nav>
       <nav className={navLinkMobile}>
         <MenuIcon
-          // className={classes.hamburgerIcon}
+          className={menuIcon}
           onClick={toggleDrawer}
         />
         <Drawer
@@ -57,17 +66,16 @@ export function Navigation({ className }) {
           // className={classes.drawerRoot}
         >
           <div
-            // className={classes.list}
+            className={list}
             role="presentation"
             onClick={toggleDrawer}
             onKeyDown={toggleDrawer}
           >
             <List>
-              <div>
-              {/* <div className={classes.drawerLinkWrapper}> */}
+              <div className={drawerLinkWrapper}>
                 <Link
                   key="All"
-                  className={navLink}
+                  className={navButtonMobile}
                   to="/products/"
                   activeClassName={activeLink}
                 >
@@ -76,7 +84,7 @@ export function Navigation({ className }) {
                 {productTypes.map((name) => (
                   <Link
                     key={name}
-                    className={navLink}
+                    className={navButtonMobile}
                     to={`/products/${slugify(name)}`}
                     activeClassName={activeLink}
                   >

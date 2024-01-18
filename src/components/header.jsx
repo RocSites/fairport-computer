@@ -8,6 +8,8 @@ import SearchIcon from "../icons/search"
 import { Toast } from "./toast"
 import {
   header,
+  headerMobile,
+  leftNavMobileWrapper,
   container,
   logo as logoCss,
   searchButton,
@@ -55,13 +57,29 @@ export function Header() {
       <header className={header}>
         <Link to="/" className={logoCss}>
           <Logo />
-          <p style={{fontWeight: "600", color: "#ffffff" }}>Fairport Computer</p>
+          <p style={{ fontWeight: "600", color: "#ffffff" }}>Fairport Computer</p>
         </Link>
         <Navigation className={nav} />
         <Link to="/search" className={searchButton}>
           <SearchIcon />
         </Link>
         <CartButton quantity={quantity} />
+      </header>
+      <header className={headerMobile}>
+        <div className={leftNavMobileWrapper}>
+          <Navigation className={nav} />
+        </div>
+        <Link to="/" className={logoCss}>
+          <Logo />
+          <p style={{ fontWeight: "600", color: "#ffffff" }}>Fairport Computer</p>
+        </Link>
+        <div className={leftNavMobileWrapper}>
+          <Link to="/search" className={searchButton}>
+            <SearchIcon />
+          </Link>
+          <CartButton quantity={quantity} />
+        </div>
+
       </header>
       <div className={navbarScroll ? subHeaderScroll : subHeader}>
         <p className={navbarScroll ? subHeaderTextScroll : subHeaderText}>Black Friday sale is happening now. Shop Now.</p>

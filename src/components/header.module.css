@@ -29,6 +29,10 @@
   justify-self: flex-end;
 }
 
+.headerMobile {
+  display: none;
+}
+
 
 @media (min-width: 640px) {
   .header {
@@ -115,4 +119,21 @@
 
 .searchButton[aria-current="page"] {
   color: var(--text-color-inverted);
+}
+
+.leftNavMobileWrapper {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 850px) {
+  .headerMobile {
+    display: flex;
+    background-color: black;
+    width: 98vw;
+    justify-content: space-between;
+  }
+  .header {
+    display: none;
+  }
 }
