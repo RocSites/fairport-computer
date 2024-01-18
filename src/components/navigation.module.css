@@ -35,3 +35,17 @@
 .navLink[aria-active="page"]:hover {
   color: var(--primary);
 }
+
+.navLinkMobile {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .navStyle {
+    display: none;
+  }
+  .navLinkMobile {
+    display: flex;
+  }
+}
+ 
