@@ -50,28 +50,37 @@ export default function IndexPage({ data }) {
       {/* TODO - refactor to be dynamic like navigation is  */}
       <ProductTypeSection
         products={data?.allShopifyProduct?.edges.map(obj => obj.node)}
-        filterBy={"Laptop"}
-        productTypes={data?.allShopifyProduct?.productTypes} 
+        filterBy={"Laptops"}
+        productTypes={data?.allShopifyProduct?.productTypes}
       />
-         <ProductTypeSection
+      <ProductTypeSection
         products={data?.allShopifyProduct?.edges.map(obj => obj.node)}
-        filterBy={"Desktop"}
-        productTypes={data?.allShopifyProduct?.productTypes} 
+        filterBy={"Desktops"}
+        productTypes={data?.allShopifyProduct?.productTypes}
       />
-         <ProductTypeSection
+      <ProductTypeSection
         products={data?.allShopifyProduct?.edges.map(obj => obj.node)}
-        filterBy={"All-In-One"}
-        productTypes={data?.allShopifyProduct?.productTypes} 
+        filterBy={"All-In-Ones"}
+        productTypes={data?.allShopifyProduct?.productTypes}
       />
-         <ProductTypeSection
+      <ProductTypeSection
+        products={data?.allShopifyProduct?.edges.map(obj => obj.node)}
+        filterBy={"Phones"}
+        productTypes={data?.allShopifyProduct?.productTypes}
+      />  <ProductTypeSection
+      products={data?.allShopifyProduct?.edges.map(obj => obj.node)}
+      filterBy={"Networking"}
+      productTypes={data?.allShopifyProduct?.productTypes}
+    />
+      <ProductTypeSection
         products={data?.allShopifyProduct?.edges.map(obj => obj.node)}
         filterBy={"Accessories & Parts"}
-        productTypes={data?.allShopifyProduct?.productTypes} 
+        productTypes={data?.allShopifyProduct?.productTypes}
       />
-         <ProductTypeSection
+      <ProductTypeSection
         products={data?.allShopifyProduct?.edges.map(obj => obj.node)}
         filterBy={"Service & Drop Off"}
-        productTypes={data?.allShopifyProduct?.productTypes} 
+        productTypes={data?.allShopifyProduct?.productTypes}
       />
 
     </Layout>

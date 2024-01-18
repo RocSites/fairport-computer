@@ -38,8 +38,7 @@
   display: flex;
   grid-area: logo;
   margin: 0 8px 0 0;
-  height: 100%;
-  width: 100%;
+  min-height: 100%;
   align-items: center;
   justify-content: center;
   color: var(--primary);
@@ -57,7 +56,7 @@
   align-items: center;
   background-color: var(--primary);
   width: 100%;
-  height: 50px;
+  min-height: 50px;
   margin: auto;
   transition: height, 0.5s linear;
 }
