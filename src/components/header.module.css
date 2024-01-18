@@ -130,7 +130,7 @@
   .headerMobile {
     display: flex;
     background-color: black;
-    width: 98vw;
+    width: 100vw;
     justify-content: space-between;
   }
   .header {

@@ -21,6 +21,7 @@
   margin-left: 48px;
   margin-bottom: 16px;
   color: var(--text-color);
+  text-align: center;
 }
 
 .callOut {
