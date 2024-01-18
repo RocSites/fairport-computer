@@ -5,6 +5,7 @@
   position: sticky;
   z-index: 1;
   top: 0;
+  max-height: 150px;
 }
 
 .header {
