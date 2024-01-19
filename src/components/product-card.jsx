@@ -3,6 +3,7 @@ import { graphql, Link } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { getShopifyImage } from "gatsby-source-shopify"
 import { formatPrice } from "../utils/format-price"
+import Logo from "../icons/logo"
 import {
   productCardStyle,
   productHeadingStyle,
@@ -22,7 +23,14 @@ export function ProductCard({ product, eager }) {
     storefrontImages,
   } = product
 
-  const firstImage = media[0]?.preview.image
+
+  let firstImage;
+
+  if(media === undefined) {
+    firstImage = []
+  } else {
+    firstImage = media[0]?.preview.image
+  }
 
   const price = formatPrice(
     priceRangeV2.minVariantPrice.currencyCode,
