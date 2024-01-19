@@ -7,6 +7,12 @@
 
 .productImageStyle {
   margin-bottom: var(--space-md);
+  display: flex;
+}
+
+.productImageStyle img {
+  max-width: 250px !important;
+  object-fit: contain !important;
 }
 
 .productDetailsStyle {
