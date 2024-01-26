@@ -115,13 +115,13 @@ export default function IndexPage({ data }) {
 
         <div className={formRoot}>
           <form
-            name="Rocsites Contact Form"
+            name="Fairport Computers Contact Form"
             method="POST"
             data-netlify="true"
             data-netlify-recaptcha="true"
             action="/thank-you"
           >
-            <input type="hidden" name="form-name" value="Fairport Computers" />
+            <input type="hidden" name="form-name" value="Fairport Computers Contact Form" />
 
             <div className={formEmail}>
               <label style={{ marginRight: "10px" }}>Email:</label>
@@ -130,18 +130,6 @@ export default function IndexPage({ data }) {
             <div className={formEmail}>
               <label style={{ marginRight: "10px" }}>Phone:</label>
               <input type="tel" name="phone" />
-            </div>
-            <div>
-              <label for="cord" style={{ marginRight: "10px" }}>Power Cord/Adapter? (Yes/No)</label>
-              <input type="text" name="cord" />
-              {/* <div>
-                <input id="power-yes" type="radio" />
-                <label for="power-yes">Yes</label>
-              </div>
-              <div>
-                <input id="power-no" type="radio" />
-                <label for="power-no">No</label>
-              </div> */}
             </div>
             <div className={formTextArea}>
               <label>How can we help?</label>
