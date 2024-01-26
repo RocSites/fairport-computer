@@ -1,10 +1,10 @@
 import { graphql, useStaticQuery, Link } from "gatsby"
 import React, { useState } from 'react'
 import slugify from "@sindresorhus/slugify"
-import { 
-  navStyle, 
-  navLink, 
-  activeLink, 
+import {
+  navStyle,
+  navLink,
+  activeLink,
   navLinkMobile,
   drawerLinkWrapper,
   navButtonMobile,
@@ -14,6 +14,8 @@ import {
 import Drawer from '@mui/material/Drawer';
 import List from '@mui/material/List';
 import MenuIcon from '@mui/icons-material/Menu';
+import { AnchorLink } from "gatsby-plugin-anchor-links";
+
 
 export function Navigation({ className }) {
   const {
@@ -53,6 +55,13 @@ export function Navigation({ className }) {
             {name}
           </Link>
         ))}
+        <AnchorLink
+          className={navLink}
+          to="#contact-us"
+          activeClassName={activeLink}
+        >
+          Contact Us
+        </AnchorLink>
       </nav>
       <nav className={navLinkMobile}>
         <MenuIcon
@@ -63,7 +72,7 @@ export function Navigation({ className }) {
           open={openDrawer}
           onClose={toggleDrawer}
           anchor="left"
-          // className={classes.drawerRoot}
+        // className={classes.drawerRoot}
         >
           <div
             className={list}

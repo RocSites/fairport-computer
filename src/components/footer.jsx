@@ -17,12 +17,12 @@ export function Footer() {
         <div className={logos}>
           <Logo />
         </div>
-        <strong>Fairport Computer</strong> 
+        <strong>Fairport Computers</strong> 
       </div>
       <nav className={links} aria-label="footer">
       </nav>
       <div className={copyright}>
-        Fairpot Computer &copy; {new Date().getFullYear()} · All rights reserved
+        Fairport Computers &copy; {new Date().getFullYear()} · All rights reserved
       </div>
     </footer>
   )

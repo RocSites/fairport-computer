@@ -10,7 +10,16 @@ import {
   callOut,
   callToAction,
   deployButton,
-  featuredProductsText
+  featuredProductsText,
+  contactUsWrapper,
+  contactSubText,
+  formRoot,
+  formEmail,
+  formTextArea,
+  callButton,
+  contactButtonWrapper,
+  submitButtonWrapper,
+  submitButton
 } from "./index.module.css"
 
 export const query = graphql`
@@ -68,10 +77,10 @@ export default function IndexPage({ data }) {
         filterBy={"Phones"}
         productTypes={data?.allShopifyProduct?.productTypes}
       />  <ProductTypeSection
-      products={data?.allShopifyProduct?.edges.map(obj => obj.node)}
-      filterBy={"Networking"}
-      productTypes={data?.allShopifyProduct?.productTypes}
-    />
+        products={data?.allShopifyProduct?.edges.map(obj => obj.node)}
+        filterBy={"Networking"}
+        productTypes={data?.allShopifyProduct?.productTypes}
+      />
       <ProductTypeSection
         products={data?.allShopifyProduct?.edges.map(obj => obj.node)}
         filterBy={"Accessories & Parts"}
@@ -82,7 +91,79 @@ export default function IndexPage({ data }) {
         filterBy={"Service & Drop Off"}
         productTypes={data?.allShopifyProduct?.productTypes}
       />
+      <div id="contact-us"></div>
+      <div className={contactUsWrapper}>
+        <h1 className={featuredProductsText}>Contact Us</h1>
+        <h2 className={contactSubText}>How can we help you?</h2>
+        <div className={contactButtonWrapper}>
+          <a
+            href="tel:(585) 520-3840">
+            <button className={callButton}>
+              (585) 520-3840
 
+            </button>
+          </a>
+          <a
+            href="mailto: fairportcomputersales@gmail.com">
+            <button className={callButton}>
+              Email Us
+            </button>
+          </a>
+        </div>
+        <br />
+        <p>Please fill out the form below:</p>
+
+        <div className={formRoot}>
+          <form
+            name="Rocsites Contact Form"
+            method="POST"
+            data-netlify="true"
+            data-netlify-recaptcha="true"
+            action="/thank-you"
+          >
+            <input type="hidden" name="form-name" value="Fairport Computers" />
+
+            <div className={formEmail}>
+              <label style={{ marginRight: "10px" }}>Email:</label>
+              <input type="email" name="email" />
+            </div>
+            <div className={formEmail}>
+              <label style={{ marginRight: "10px" }}>Phone:</label>
+              <input type="tel" name="phone" />
+            </div>
+            <div>
+              <label for="cord" style={{ marginRight: "10px" }}>Power Cord/Adapter? (Yes/No)</label>
+              <input type="text" name="cord" />
+              {/* <div>
+                <input id="power-yes" type="radio" />
+                <label for="power-yes">Yes</label>
+              </div>
+              <div>
+                <input id="power-no" type="radio" />
+                <label for="power-no">No</label>
+              </div> */}
+            </div>
+            <div className={formTextArea}>
+              <label>How can we help?</label>
+              <textarea name="message" />
+            </div>
+            {/* <div className={classes.captchaWrapper}>
+          <ReCAPTCHA sitekey="6LevMeshAAAAAJ3QDvN0h3-gystjzxxMGZj094DL" />
+        </div> */}
+            <div
+              className={submitButtonWrapper}
+            >
+              <button
+                className={submitButton}
+                type="submit"
+              >Send</button>
+            </div>
+          </form>
+        </div>
+        <h1 className={featuredProductsText}>Location</h1>
+        <h3>150 Packetts Landing, Fairport, NY 14450</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11652.681646745279!2d-77.4418089!3d43.1009335!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d6ccab11802f45%3A0xf8dfc66de116cb77!2sFairport%20Computers!5e0!3m2!1sen!2sus!4v1706284306625!5m2!1sen!2sus" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
     </Layout>
   )
 }

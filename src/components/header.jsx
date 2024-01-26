@@ -57,7 +57,7 @@ export function Header() {
       <header className={header}>
         <Link to="/" className={logoCss}>
           <Logo />
-          <p style={{ fontWeight: "600", color: "#ffffff" }}>Fairport Computer</p>
+          <p style={{ fontWeight: "600", color: "#ffffff" }}>Fairport Computers</p>
         </Link>
         <Navigation className={nav} />
         <Link to="/search" className={searchButton}>

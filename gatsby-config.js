@@ -2,13 +2,15 @@ require("dotenv").config()
 
 module.exports = {
   siteMetadata: {
-    siteTitle: "gatsby-starter-shopify",
-    siteTitleDefault: "gatsby-starter-shopify by @GatsbyJS",
-    siteUrl: "https://shopify-demo.gatsbyjs.com",
+    siteTitle: "Fairport Computers",
+    siteTitleDefault: "Fairport Computers",
+    siteUrl: "https://fairportcomputer.com/",
     siteDescription:
-      "A Gatsby starter using the latest Shopify plugin showcasing a store with product overview, individual product pages, and a cart.",
+      "A local, verified computer sales and service company.",
     siteImage: "/default-og-image.jpg",
-    twitter: "@gatsbyjs",
+    instagram: "https://www.instagram.com/fairportcomputers/?fbclid=IwAR1xho7qc7x7P62YEwM-XzTCCQ48GXhdVcsCzJsVzo3bw58nIWKvo06d2zc",
+    facebook: "https://www.facebook.com/p/Fairport-Computers-100064346310178/",
+    twitter: ""
   },
   flags: {
     FAST_DEV: true,

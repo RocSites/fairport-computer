@@ -1,6 +1,6 @@
 .listingContainerStyle {
   display: grid;
-  grid-template-columns: var(--product-grid);
+  grid-template-columns: repeat(3, 1fr);
   place-items: flex-start;
   gap: var(--size-gutter-raw);
   padding: 8px var(--size-gutter-raw);
