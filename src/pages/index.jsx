@@ -123,7 +123,7 @@ export default function IndexPage({ data }) {
             name="Fairport Computers Contact Form"
             method="POST"
             data-netlify="true"
-            data-netlify-recaptcha="true"
+            // data-netlify-recaptcha="true"
             action="/thank-you"
           >
             <input type="hidden" name="form-name" value="Fairport Computers Contact Form" />
