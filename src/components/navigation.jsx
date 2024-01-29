@@ -57,6 +57,7 @@ export function Navigation({ className }) {
             {name}
           </Link>
         ))}
+        <Link to="/services" className={navLink}>Service/Drop Off</Link>
         <AnchorLink
           className={navLink}
           to="#contact-us"
