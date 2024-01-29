@@ -123,7 +123,6 @@ export default function IndexPage({ data }) {
             name="Fairport Computers Contact Form"
             method="POST"
             data-netlify="true"
-            data-netlify-honeypot="bot-field"
             action="/thank-you"
           >
             <input type="hidden" name="form-name" value="Fairport Computers Contact Form" />
