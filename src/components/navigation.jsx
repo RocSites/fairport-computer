@@ -1,5 +1,7 @@
 import { graphql, useStaticQuery, Link } from "gatsby"
 import React, { useState } from 'react'
+import InstagramIcon from "../icons/instagram"
+import FacebookIcon from "../icons/facebook"
 import slugify from "@sindresorhus/slugify"
 import {
   navStyle,
@@ -100,6 +102,20 @@ export function Navigation({ className }) {
                     {name}
                   </Link>
                 ))}
+                <div style={{
+                  display: "flex",
+                  justifyContent: "flex-start",
+                  marginLeft: "14px",
+                  marginTop: "10px"
+                }}>
+                  <a style={{ marginRight: "10px" }} target="_blank" href="https://www.instagram.com/fairportcomputers/?igsh=MTF1ZXI4OGlndWI2cQ%3D%3D">
+                    <InstagramIcon color="#016cc7" />
+                  </a>
+                  <a target="_blank" href="https://www.facebook.com/p/Fairport-Computers-100064346310178/">
+                    <FacebookIcon color="#016cc7" />
+                  </a>
+                </div>
+
               </div>
 
             </List>

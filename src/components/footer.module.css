@@ -4,8 +4,10 @@
   display: grid;
   grid-template-columns: 1fr;
   text-align: center;
-  color: var(--text-color-secondary);
+  color: var(--text-color-inverted);
   margin-top: var(--space-3xl);
+  background-color: var(--primary);
+
 }
 
 .logos {
@@ -20,7 +22,7 @@
 }
 
 .copyright {
-  color: var(--text-color-secondary);
+  color: var(--text-color-inverted);
   font-size: var(--text-xs);
 }
 
@@ -36,6 +38,11 @@
   flex-direction: column;
   flex: 0 0 100%;
   white-space: nowrap;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
 }
 
 .links ul {

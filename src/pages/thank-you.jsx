@@ -10,7 +10,7 @@ export default function ThankYouPage() {
                 display: "flex", 
                 margin: "auto", 
                 justifyContent: "center",
-                minHeight: "50vh"
+                minHeight: "54vh"
             }}>
                 <div
                 style={{

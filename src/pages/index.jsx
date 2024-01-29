@@ -94,7 +94,6 @@ export default function IndexPage({ data }) {
       <div id="contact-us"></div>
       <div className={contactUsWrapper}>
         <h1 className={featuredProductsText}>Contact Us</h1>
-        <h2 className={contactSubText}>How can we help you?</h2>
         <div className={contactButtonWrapper}>
           <a
             href="tel:(585) 520-3840">
@@ -110,6 +109,9 @@ export default function IndexPage({ data }) {
             </button>
           </a>
         </div>
+
+        <br />
+        <h2 className={contactSubText}>How can we help you?</h2>
         <br />
         <p>Please fill out the form below:</p>
 
