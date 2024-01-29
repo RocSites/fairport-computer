@@ -4,6 +4,9 @@ import { Layout } from "../components/layout"
 import { ProductListing } from "../components/product-listing"
 import { ProductTypeSection } from "../components/product-type-section"
 import { Seo } from "../components/seo"
+import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
+import Recaptcha from "../components/recaptcha"
+
 import {
   container,
   intro,
@@ -137,9 +140,11 @@ export default function IndexPage({ data }) {
               <label>How can we help?</label>
               <textarea name="message" />
             </div>
-            {/* <div className={classes.captchaWrapper}>
-          <ReCAPTCHA sitekey="6LevMeshAAAAAJ3QDvN0h3-gystjzxxMGZj094DL" />
-        </div> */}
+            <div style={{ margin: "10px" }}>
+              <GoogleReCaptchaProvider reCaptchaKey="6LeKGGApAAAAAFHqUMBHjpurs49F61ybKCsbH4Wh">
+                <Recaptcha />
+              </GoogleReCaptchaProvider>
+            </div>
             <div
               className={submitButtonWrapper}
             >
