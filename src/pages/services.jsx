@@ -38,8 +38,12 @@ export default function ServicesPage() {
                             <input type="tel" name="phone" />
                         </div>
                         <div className={formTextArea}>
-                            <label>How can we help?</label>
+                            <label>Description of Problem</label>
                             <textarea name="message" />
+                        </div>
+                        <div className={formEmail}>
+                            <label>Power Cord/Adapter? (Yes/No)</label>
+                            <input name="power" />
                         </div>
                         <div style={{ margin: "10px" }}>
                             <GoogleReCaptchaProvider reCaptchaKey="6LeKGGApAAAAAFHqUMBHjpurs49F61ybKCsbH4Wh">
