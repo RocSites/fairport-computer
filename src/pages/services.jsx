@@ -55,11 +55,11 @@ export default function ServicesPage() {
                         </div>
                         <div className={formEmail}>
                             <label>Device Model - (iPhone, MacBook, ThinkPad etc.)</label>
-                            <input name="device-make" />
+                            <input name="device-model" />
                         </div>
                         <div className={formEmail}>
                             <label>Serial Number</label>
-                            <input name="device-model" />
+                            <input name="service-number" />
                         </div>
                         <div style={{ margin: "10px" }}>
                             <GoogleReCaptchaProvider reCaptchaKey="6LeKGGApAAAAAFHqUMBHjpurs49F61ybKCsbH4Wh">
