@@ -128,11 +128,11 @@ export default function IndexPage({ data }) {
             <input type="hidden" name="form-name" value="Fairport Computers Contact Form" />
 
             <div className={formEmail}>
-              <label style={{ marginRight: "10px" }}>Email:</label>
+              <label style={{ marginRight: "10px" }}>Email</label>
               <input type="email" name="email" />
             </div>
             <div className={formEmail}>
-              <label style={{ marginRight: "10px" }}>Phone:</label>
+              <label style={{ marginRight: "10px" }}>Phone</label>
               <input type="tel" name="phone" />
             </div>
             <div className={formTextArea}>

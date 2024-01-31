@@ -30,11 +30,11 @@ export default function ServicesPage() {
                         <input type="hidden" name="form-name" value="Fairport Computers Services Form" />
 
                         <div className={formEmail}>
-                            <label style={{ marginRight: "10px" }}>Email:</label>
+                            <label style={{ marginRight: "10px" }}>Email (required)</label>
                             <input type="email" name="email" />
                         </div>
                         <div className={formEmail}>
-                            <label style={{ marginRight: "10px" }}>Phone:</label>
+                            <label style={{ marginRight: "10px" }}>Phone</label>
                             <input type="tel" name="phone" />
                         </div>
                         <div className={formTextArea}>
@@ -42,8 +42,20 @@ export default function ServicesPage() {
                             <textarea name="message" />
                         </div>
                         <div className={formEmail}>
-                            <label>Power Cord/Adapter? (Yes/No)</label>
+                            <label>Power Cord/Adapter? - (Yes/No)</label>
                             <input name="power" />
+                        </div>
+                        <div className={formEmail}>
+                            <label>Device/Computer Type - (Laptop, Phone, Desktop etc.)</label>
+                            <input name="device-type" />
+                        </div>
+                        <div className={formEmail}>
+                            <label>Device Make - (Apple, Microsoft, Lenovo etc.)</label>
+                            <input name="device-make" />
+                        </div>
+                        <div className={formEmail}>
+                            <label>Serial Number</label>
+                            <input name="device-model" />
                         </div>
                         <div style={{ margin: "10px" }}>
                             <GoogleReCaptchaProvider reCaptchaKey="6LeKGGApAAAAAFHqUMBHjpurs49F61ybKCsbH4Wh">

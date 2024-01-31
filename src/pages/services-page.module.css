@@ -20,7 +20,7 @@
   }
   
   .formRoot input {
-    border-radius: 3px;
+    border-radius: 16px;
     font-weight: normal;
     border: 1px solid black;
     width: 100%;
@@ -32,6 +32,8 @@
     font-weight: normal;
     height: 100px;
     border: 1px solid black;
+    border-radius: 16px;
+    padding: 10px;
   }
   
   .formRoot form {
