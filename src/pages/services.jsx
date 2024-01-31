@@ -43,7 +43,7 @@ export default function ServicesPage() {
                         </div>
                         <div className={formEmail}>
                             <label>Power Cord/Adapter? - (Yes/No)</label>
-                            <input name="power" />
+                            <input name="power-adapter" />
                         </div>
                         <div className={formEmail}>
                             <label>Device/Computer Type - (Laptop, Phone, Desktop etc.)</label>

@@ -60,8 +60,7 @@ export function Navigation({ className }) {
         <Link to="/services" className={navLink}>Service/Drop Off</Link>
         <AnchorLink
           className={navLink}
-          to="#contact-us"
-          activeClassName={activeLink}
+          to="/#contact-us"
         >
           Contact Us
         </AnchorLink>
@@ -103,6 +102,12 @@ export function Navigation({ className }) {
                     {name}
                   </Link>
                 ))}
+                <AnchorLink
+                  className={navButtonMobile}
+                  to="/#contact-us"
+                >
+                  Contact Us
+                </AnchorLink>
                 <div style={{
                   display: "flex",
                   justifyContent: "flex-start",
