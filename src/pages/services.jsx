@@ -54,6 +54,10 @@ export default function ServicesPage() {
                             <input name="device-make" />
                         </div>
                         <div className={formEmail}>
+                            <label>Device Model - (iPhone, MacBook, ThinkPad etc.)</label>
+                            <input name="device-make" />
+                        </div>
+                        <div className={formEmail}>
                             <label>Serial Number</label>
                             <input name="device-model" />
                         </div>
