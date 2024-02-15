@@ -3,4 +3,5 @@
   font-weight: var(--bold);
   margin: 0;
   padding: var(--space-2xl) var(--size-gutter-raw) var(--space-2xl);
+  text-align: center;
 }

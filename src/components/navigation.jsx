@@ -6,6 +6,7 @@ import slugify from "@sindresorhus/slugify"
 import {
   navStyle,
   navLink,
+  navLinkService,
   activeLink,
   navLinkMobile,
   drawerLinkWrapper,
@@ -102,6 +103,8 @@ export function Navigation({ className }) {
                     {name}
                   </Link>
                 ))}
+                <Link to="/services" className={navLinkService}>Service/Drop Off</Link>
+
                 <AnchorLink
                   className={navButtonMobile}
                   to="/#contact-us"

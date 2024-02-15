@@ -19,6 +19,15 @@
   padding-right: var(--space-md);
 }
 
+.navLinkService {
+  cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  color: var(--text-color);
+  align-items: center;
+  margin: 10px 16px;
+}
+
 .navLink:hover {
   color: var(--text-color-secondary);
 }
@@ -62,7 +71,7 @@
   text-decoration: none;
 }
 
-@media (max-width: 850px) {
+@media (max-width: 1150px) {
   .navStyle {
     display: none;
   }
@@ -72,7 +81,7 @@
   }
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1300px) {
   .navStyle {
     justify-content: flex-end;
   }

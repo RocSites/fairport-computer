@@ -1,7 +1,15 @@
 .listingContainerStyle {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  place-items: flex-start;
+  place-items: center;
   gap: var(--size-gutter-raw);
   padding: 8px var(--size-gutter-raw);
+}
+
+@media (max-width: 850px) {
+  .listingContainerStyle {
+    grid-template-columns: 1fr;
+
+  }
+
 }

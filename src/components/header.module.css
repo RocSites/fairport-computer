@@ -126,7 +126,7 @@
   align-items: center;
 }
 
-@media (max-width: 850px) {
+@media (max-width: 1150px) {
   .headerMobile {
     display: flex;
     background-color: black;
