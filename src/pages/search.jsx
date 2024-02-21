@@ -122,6 +122,7 @@ function SearchPage({
     }
   }, [products, showModal])
 
+
   // Stop page from scrolling when modal is visible
   React.useEffect(() => {
     if (showModal) {

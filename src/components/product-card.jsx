@@ -4,6 +4,8 @@ import { GatsbyImage } from "gatsby-plugin-image"
 import { getShopifyImage } from "gatsby-source-shopify"
 import { formatPrice } from "../utils/format-price"
 import Logo from "../icons/logo"
+import NoImagePlaceholder from "../images/no_image_available.jpeg"
+
 import {
   productCardStyle,
   productHeadingStyle,
@@ -26,7 +28,7 @@ export function ProductCard({ product, eager }) {
 
   let firstImage;
 
-  if(media === undefined) {
+  if (media === undefined) {
     firstImage = []
   } else {
     firstImage = media[0]?.preview.image
@@ -40,8 +42,14 @@ export function ProductCard({ product, eager }) {
   const defaultImageHeight = 200
   const defaultImageWidth = 200
   let storefrontImageData = {}
+  let storefrontImage;
+
   if (storefrontImages) {
-    const storefrontImage = storefrontImages.edges[0].node
+    if (storefrontImages.edges[0] === undefined) {
+      storefrontImage = "";
+    } else {
+      storefrontImage = storefrontImages.edges[0].node
+    }
     try {
       storefrontImageData = getShopifyImage({
         image: storefrontImage,
@@ -55,7 +63,7 @@ export function ProductCard({ product, eager }) {
   }
 
   const hasImage = firstImage || Object.getOwnPropertyNames(storefrontImageData || {}).length
-
+  console.log(storefrontImageData)
   return (
     <Link
       className={productCardStyle}
@@ -65,14 +73,20 @@ export function ProductCard({ product, eager }) {
       {hasImage
         ? (
           <div className={productImageStyle} data-name="product-image-box">
-            <GatsbyImage
-              alt={firstImage?.altText ?? title}
-              image={firstImage?.gatsbyImageData ?? storefrontImageData}
-              loading={eager ? "eager" : "lazy"}
-            />
+            {storefrontImageData.images !== undefined ||  firstImage?.gatsbyImageData !== undefined ? (
+              <GatsbyImage
+                alt={firstImage?.altText ?? title}
+                image={firstImage?.gatsbyImageData ?? storefrontImageData}
+                loading={eager ? "eager" : "lazy"}
+              />
+            ) : <img style={{margin: "auto", height: "200px", width: "200px"}} src={NoImagePlaceholder} />
+            }
+
           </div>
         ) : (
-          <div style={{ height: defaultImageHeight, width: defaultImageWidth }} />
+          <div style={{ height: defaultImageHeight, width: defaultImageWidth }}>
+            <img style={{margin: "auto !important"}} src={NoImagePlaceholder} />
+          </div>
         )
       }
       <div className={productDetailsStyle}>

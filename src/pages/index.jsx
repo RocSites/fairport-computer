@@ -156,7 +156,7 @@ export default function IndexPage({ data }) {
         </div>
         <h1 className={featuredProductsText}>Location</h1>
         <h3>150 Packetts Landing, Fairport, NY 14450</h3>
-        <br/>
+        <br />
         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11652.681646745279!2d-77.4418089!3d43.1009335!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d6ccab11802f45%3A0xf8dfc66de116cb77!2sFairport%20Computers!5e0!3m2!1sen!2sus!4v1706284306625!5m2!1sen!2sus" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </Layout>
