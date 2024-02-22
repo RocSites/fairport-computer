@@ -11,7 +11,6 @@ export function ProductTypeSection(props) {
     <>
       {filteredProducts.length > 0 ? (
         <div style={{
-          backgroundColor: "#f3f3f3",
           padding: "16px",
           margin: "24px 0"
         }}>
