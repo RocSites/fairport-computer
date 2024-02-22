@@ -28,10 +28,14 @@ export default function ServicesPage() {
                         action="/thank-you"
                     >
                         <input type="hidden" name="form-name" value="Fairport Computers Services Form" />
+                        <div className={formEmail}>
+                            <label style={{ marginRight: "10px" }}>Name (required)</label>
+                            <input type="text" name="name" required/>
+                        </div>
 
                         <div className={formEmail}>
                             <label style={{ marginRight: "10px" }}>Email (required)</label>
-                            <input type="email" name="email" />
+                            <input type="email" name="email" required/>
                         </div>
                         <div className={formEmail}>
                             <label style={{ marginRight: "10px" }}>Phone</label>

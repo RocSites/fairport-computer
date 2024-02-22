@@ -126,7 +126,10 @@ export default function IndexPage({ data }) {
             action="/thank-you"
           >
             <input type="hidden" name="form-name" value="Fairport Computers Contact Form" />
-
+            <div className={formEmail}>
+              <label style={{ marginRight: "10px" }}>Name</label>
+              <input type="text" name="name" />
+            </div>
             <div className={formEmail}>
               <label style={{ marginRight: "10px" }}>Email</label>
               <input type="email" name="email" />
