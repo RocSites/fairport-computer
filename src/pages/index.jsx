@@ -106,7 +106,7 @@ export default function IndexPage({ data }) {
             </button>
           </a>
           <a
-            href="mailto: fairportcomputersales@gmail.com">
+            href="mailto: sales@fairportcomputer.com">
             <button className={callButton}>
               Email Us
             </button>
