@@ -82,7 +82,7 @@ export function Header() {
 
       </header>
       <div className={navbarScroll ? subHeaderScroll : subHeader}>
-        <p className={navbarScroll ? subHeaderTextScroll : subHeaderText}>Black Friday sale is happening now. Shop Now.</p>
+        <p className={navbarScroll ? subHeaderTextScroll : subHeaderText}>One Year Warranty and Office 2019 full version included with every Purchase</p>
       </div>
       <Toast show={loading || didJustAddToCart}>
         {!didJustAddToCart ? (

@@ -65,6 +65,7 @@
   min-height: 50px;
   margin: auto;
   transition: height, 0.5s linear;
+  padding: 10px;
 }
 
 .subHeaderScroll {
@@ -78,7 +79,8 @@
 }
 
 .subHeaderText {
-  color: var(--text-color-inverted)
+  color: var(--text-color-inverted);
+  text-align: center;
 }
 
 .subHeaderTextScroll {
