@@ -8,8 +8,8 @@ import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
 import Recaptcha from "../components/recaptcha"
 import LocationPicOne from "../images/front_of_store.jpeg"
 import LocationPicTwo from "../images/front_of_store_2.jpeg"
-import {Helmet} from "react-helmet";
- 
+import { Helmet } from "react-helmet";
+
 
 import {
   container,
@@ -166,18 +166,19 @@ export default function IndexPage({ data }) {
         </div>
         <h1 className={featuredProductsText}>Location</h1>
         <h3>150 Packetts Landing, Fairport, NY 14450</h3>
-        <br/>
-        <p style={{margin: "10px", textAlign: "center"}}>Located on Main Street, inside Packetts Landing, lower level</p>
+        <br />
+        <p style={{ margin: "10px", textAlign: "center" }}>Located on Main Street, inside Packetts Landing, lower level</p>
         <br />
         <div className={locationImageWrapper}>
-          <img className={locationImage} src={LocationPicOne}/>
-          <img className={locationImage} src={LocationPicTwo}/>
+          <img className={locationImage} src={LocationPicTwo} />
+
+          <img className={locationImage} src={LocationPicOne} />
         </div>
         <iframe className={mapWrapper} src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11652.681646745279!2d-77.4418089!3d43.1009335!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d6ccab11802f45%3A0xf8dfc66de116cb77!2sFairport%20Computers!5e0!3m2!1sen!2sus!4v1706284306625!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
-      
+
       <Helmet>
-      <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=ec255741-a492-448d-ab5f-6cef6719d5f3"> </script>
+        <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=ec255741-a492-448d-ab5f-6cef6719d5f3"> </script>
       </Helmet>
     </Layout>
   )
