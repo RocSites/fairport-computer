@@ -178,8 +178,7 @@ export default function IndexPage({ data }) {
       </div>
 
       <Helmet>
-        <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=ec255741-a492-448d-ab5f-6cef6719d5f3"> </script>
-      </Helmet>
+      <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=ec255741-a492-448d-ab5f-6cef6719d5f3"> </script>      </Helmet>
     </Layout>
   )
 }
