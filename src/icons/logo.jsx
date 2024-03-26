@@ -1,6 +1,9 @@
 import * as React from "react"
 import DevicesIcon from '@mui/icons-material/Devices';
-
+import newLogo from "../images/new_logo.jpg"
+import {
+  logoRoot
+} from "./logo.module.css"
 
 function Logo(props) {
   return (
@@ -18,7 +21,8 @@ function Logo(props) {
     //     fill="currentColor"
     //   />
     // </svg>
-    <DevicesIcon style={{margin: "0 8px 0 0"}} />
+    // <DevicesIcon style={{margin: "0 8px 0 0"}} />
+    <img className={logoRoot} src={newLogo}/>
 
     // display: "flex",
     // width: "50px",

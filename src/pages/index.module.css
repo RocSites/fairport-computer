@@ -167,6 +167,12 @@
   margin-top: 100px;
 }
 
+.locationHelpText {
+  font-size: 1.25rem;
+  margin: 10px;
+  text-align: center;
+}
+
 @media (max-width: 640px) {
   .formRoot form {
     width: 75%;

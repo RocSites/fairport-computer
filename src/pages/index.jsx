@@ -29,7 +29,8 @@ import {
   submitButton,
   locationImage,
   locationImageWrapper,
-  mapWrapper
+  mapWrapper,
+  locationHelpText
 } from "./index.module.css"
 
 export const query = graphql`
@@ -165,9 +166,10 @@ export default function IndexPage({ data }) {
           </form>
         </div>
         <h1 className={featuredProductsText}>Location</h1>
-        <h3>150 Packetts Landing, Fairport, NY 14450</h3>
+        <h2 style={{fontSize: "1.5rem"}}>150 Packetts Landing, Fairport, NY 14450</h2>
         <br />
-        <p style={{ margin: "10px", textAlign: "center" }}>Located on Main Street, inside Packetts Landing, lower level</p>
+        <p className={locationHelpText}>Located on Main Street, inside Packetts Landing, lower level</p>
+        <p className={locationHelpText}>South of the lift bridge, across from the library</p>
         <br />
         <div className={locationImageWrapper}>
           <img className={locationImage} src={LocationPicTwo} />

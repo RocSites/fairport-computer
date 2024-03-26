@@ -1,0 +1,18 @@
+.logoRoot {
+    height: 70px;
+    border-radius: 16px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+@media (max-width: 1150px) {
+    .logoRoot {
+        height: 50px;
+    }
+}
+
+/* @media (max-width: 640px) {
+    .logoRoot {
+        height: 50px;
+    }
+} */

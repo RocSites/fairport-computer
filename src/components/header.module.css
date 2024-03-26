@@ -97,7 +97,7 @@
 .logo[aria-current="page"] {
   color: var(--primary);
   margin: 0 8px 0 0;
-  min-width: 200px;
+  min-width: 250px;
   z-index: 9999;
 }
 
