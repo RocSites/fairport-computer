@@ -1,6 +1,6 @@
 import * as React from "react"
 import DevicesIcon from '@mui/icons-material/Devices';
-import newLogo from "../images/new_logo.jpg"
+import newLogo from "../images/new_logo2.jpg"
 import {
   logoRoot
 } from "./logo.module.css"
