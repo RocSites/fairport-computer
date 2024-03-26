@@ -166,7 +166,7 @@ export default function IndexPage({ data }) {
           </form>
         </div>
         <h1 className={featuredProductsText}>Location</h1>
-        <h2 style={{fontSize: "1.5rem"}}>150 Packetts Landing, Fairport, NY 14450</h2>
+        <h2 style={{fontSize: "1.5rem", textAlign: "center"}}>150 Packetts Landing, Fairport, NY 14450</h2>
         <br />
         <p className={locationHelpText}>Located on Main Street, inside Packetts Landing, lower level</p>
         <p className={locationHelpText}>South of the lift bridge, across from the library</p>
