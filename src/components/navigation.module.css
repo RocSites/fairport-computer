@@ -81,8 +81,10 @@
   }
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1600px) {
   .navStyle {
-    justify-content: flex-end;
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin-left: 250px;
   }
 }
