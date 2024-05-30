@@ -22,7 +22,7 @@ export default function CanalDaysRaffle() {
                     data-netlify="true"
                     action="/thank-you-raffle"
                 >
-                    <input type="hidden"s name="form-name" value="Fairport Computers Contact Form" />
+                    <input type="hidden"s name="form-name" value="Canal Days Raffle Form" />
                     <div className={formEmail}>
                         <label style={{ marginRight: "10px" }}>Name</label>
                         <input type="text" name="name" />
