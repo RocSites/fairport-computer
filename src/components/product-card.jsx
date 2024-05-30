@@ -63,7 +63,6 @@ export function ProductCard({ product, eager }) {
   }
 
   const hasImage = firstImage || Object.getOwnPropertyNames(storefrontImageData || {}).length
-  console.log(storefrontImageData)
   return (
     <Link
       className={productCardStyle}
