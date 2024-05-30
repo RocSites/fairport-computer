@@ -24,6 +24,7 @@ export default function ThankYouPage() {
                 >
                     <p style={{
                         fontSize: "2rem",
+                        textAlign: "center"
                     }}>Thank you for your submission! </p>
                     <p style={{
                         fontSize: "1.5rem"
