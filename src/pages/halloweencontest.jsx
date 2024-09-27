@@ -31,7 +31,7 @@ export default function HalloweenContest() {
             <div className={emailPhotoWrapper}>
                 <a
                     className={emailPhotoLink}
-                    href="mailto:doug@rocsites.com?subject=Maizie and Friends Spooky Costume Contest Submission &body=Please include your name and phone number, then attach your photo to this email. Good luck! %0D%0A %0D%0A Name: %0D%0A %0D%0A Phone Number:">
+                    href="mailto:fairportcomputersales@gmail.com?subject=Maizie and Friends Spooky Costume Contest Submission &body=Please include your name and phone number, then attach your photo to this email. Good luck! %0D%0A %0D%0A Name: %0D%0A %0D%0A Phone Number:">
                     Submit Your Photo Here!
                 </a>
             </div>
