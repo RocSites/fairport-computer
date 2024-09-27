@@ -149,6 +149,7 @@
   flex-direction: column;
   align-items: center;
   margin: auto;
+  padding: 2em;
 }
 
 .contestStep {

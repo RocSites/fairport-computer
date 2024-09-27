@@ -24,14 +24,15 @@ export default function HalloweenContest() {
                 <h2 className={contestHeader}>Contest Steps:</h2>
                 <br/>
                 <ul>
-                    <li className={contestStep}>1. Please click the orange button below to email us your photo</li>
-                    <li className={contestStep}>2. Please fill your <b>name</b>, <b>email</b>, and<b> email</b></li>
+                    <li className={contestStep}>1. Please click the <b><span style={{color: "#ff7132"}}>orange button</span></b> below to email us your photo</li>
+                    <br/>
+                    <li className={contestStep}>2. Then please fill out the form below your <b>name</b>, <b>email</b>, and<b> email</b></li>
                 </ul>
             </div>
             <div className={emailPhotoWrapper}>
                 <a
                     className={emailPhotoLink}
-                    href="mailto:doug@rocsites?subject=Maizie and Friends Spooky Costume Contest Submission mailto!&body=Please include your name and phone number, then attach your photo to this email. Good luck!">
+                    href="mailto:doug@rocsites.com?subject=Maizie and Friends Spooky Costume Contest Submission mailto!&body=Please include your name and phone number, then attach your photo to this email. Good luck!">
                     Submit Your Photo Here!
                 </a>
             </div>
