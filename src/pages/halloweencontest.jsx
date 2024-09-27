@@ -32,45 +32,9 @@ export default function HalloweenContest() {
             <div className={emailPhotoWrapper}>
                 <a
                     className={emailPhotoLink}
-                    href="mailto:doug@rocsites.com?subject=Maizie and Friends Spooky Costume Contest Submission mailto!&body=Please include your name and phone number, then attach your photo to this email. Good luck!">
+                    href="mailto:doug@rocsites.com?subject=Maizie and Friends Spooky Costume Contest Submission &body=Please include your name and phone number, then attach your photo to this email. Good luck! %0D%0A %0D%0A Name: %0D%0A %0D%0A Phone Number:">
                     Submit Your Photo Here!
                 </a>
-            </div>
-
-            <div className={formRoot}>
-                <form
-                    name="Halloween Contest"
-                    method="POST"
-                    data-netlify="true"
-                    action="/thank-you-raffle"
-                >
-                    <input type="hidden" s name="form-name" value="Halloween Contest" />
-                    <div className={formEmail}>
-                        <label style={{ marginRight: "10px" }}>Name</label>
-                        <input type="text" name="name" />
-                    </div>
-                    <div className={formEmail}>
-                        <label style={{ marginRight: "10px" }}>Email</label>
-                        <input type="email" name="email" />
-                    </div>
-                    <div className={formEmail}>
-                        <label style={{ marginRight: "10px" }}>Phone</label>
-                        <input type="tel" name="phone" />
-                    </div>
-                    <div style={{ margin: "10px" }}>
-                        <GoogleReCaptchaProvider reCaptchaKey="6LeKGGApAAAAAFHqUMBHjpurs49F61ybKCsbH4Wh">
-                            <Recaptcha />
-                        </GoogleReCaptchaProvider>
-                    </div>
-                    <div
-                        className={submitButtonWrapper}
-                    >
-                        <button
-                            className={submitButton}
-                            type="submit"
-                        >Send</button>
-                    </div>
-                </form>
             </div>
        
         </Layout>
