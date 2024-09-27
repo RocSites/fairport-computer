@@ -21,12 +21,11 @@ export default function HalloweenContest() {
         <Layout>
             <h1 className={featuredProductsText}>Maizie and Friends Spooky Costume Contest</h1>
             <div className={emailLinkDiv}>
-                <h2 className={contestHeader}>Contest Steps:</h2>
+                <h2 className={contestHeader}>Contest Instructions:</h2>
                 <br/>
                 <ul>
-                    <li className={contestStep}>1. Please click the <b><span style={{color: "#ff7132"}}>orange button</span></b> below to email us your photo</li>
+                    <li className={contestStep}>1. Please click the <b><span style={{color: "#ff7132"}}>orange button</span></b> below to email us your photo. </li>
                     <br/>
-                    <li className={contestStep}>2. Then please fill out the form below your <b>name</b>, <b>email</b>, and<b> email</b></li>
                 </ul>
             </div>
             <div className={emailPhotoWrapper}>
