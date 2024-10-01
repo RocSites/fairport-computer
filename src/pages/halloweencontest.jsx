@@ -9,6 +9,7 @@ import {
     submitButtonWrapper,
     submitButton,
     featuredProductsText,
+    halloweenHeaderText,
     emailPhotoLink,
     emailPhotoWrapper,
     emailLinkDiv,
@@ -19,7 +20,7 @@ import {
 export default function HalloweenContest() {
     return (
         <Layout>
-            <h1 className={featuredProductsText}>Maizie and Friends Spooky Costume Contest</h1>
+            <h1 className={halloweenHeaderText}>Maizie and Friends Spooky Costume Contest</h1>
             <div className={emailLinkDiv}>
                 <h2 className={contestHeader}>Contest Instructions:</h2>
                 <br/>

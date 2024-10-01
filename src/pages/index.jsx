@@ -1,6 +1,7 @@
 import * as React from "react"
 import { graphql } from "gatsby"
 import { Layout } from "../components/layout"
+import { Link } from "gatsby"
 import { ProductListing } from "../components/product-listing"
 import { ProductTypeSection } from "../components/product-type-section"
 import { Seo } from "../components/seo"
@@ -30,7 +31,10 @@ import {
   locationImage,
   locationImageWrapper,
   mapWrapper,
-  locationHelpText
+  locationHelpText,
+  emailPhotoLink,
+  halloweenContestLinkWrapper,
+  halloweenLinkHeaderText
 } from "./index.module.css"
 
 export const query = graphql`
@@ -63,6 +67,10 @@ export default function IndexPage({ data }) {
   return (
     <Layout>
       <Hero />
+      <div className={halloweenContestLinkWrapper}>
+        <h1 className={halloweenLinkHeaderText}>Submit a photo to our Halloween Costume Contest!</h1>
+        <Link className={emailPhotoLink} to="/halloweencontest">Click Here!</Link>
+      </div>
       <h1 className={featuredProductsText}>Featured Products/Services</h1>
       {/* <div style={{minHeight: "50vh"}}>background picture or featured content goes here</div> */}
       <ProductListing products={data?.shopifyCollection?.products} />

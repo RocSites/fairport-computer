@@ -25,6 +25,14 @@
   margin-bottom: 16px;
   color: var(--text-color);
   text-align: center;
+}
+
+.halloweenHeaderText {
+  font-weight: 600;
+  font-size: 2.25rem;
+  margin-bottom: 16px;
+  color: var(--text-color);
+  text-align: center;
   font-family: "Creepster", system-ui;
   font-weight: 400;
   font-style: normal;
@@ -143,6 +151,23 @@
   text-transform: none;
   font-size: 1.0rem;
   font-weight: bold;
+}
+
+.halloweenContestLinkWrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column; 
+  align-items: center;
+  margin-top: 20px;
+}
+
+.halloweenLinkHeaderText {
+  font-size: 2em;
+  font-family: "Creepster", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  color:#ff7132;
+  text-align: center;
 }
 
 .emailPhotoWrapper {
