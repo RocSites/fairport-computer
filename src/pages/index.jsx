@@ -68,8 +68,8 @@ export default function IndexPage({ data }) {
     <Layout>
       <Hero />
       <div className={halloweenContestLinkWrapper}>
-        <h1 className={halloweenLinkHeaderText}>Submit a photo to our Halloween Costume Contest!</h1>
-        <Link className={emailPhotoLink} to="/halloweencontest">Click Here!</Link>
+        <h1 className={halloweenLinkHeaderText}>Black Friday Deals from 11/25-11/29</h1>
+        {/* <Link className={emailPhotoLink} to="/halloweencontest">Click Here!</Link> */}
       </div>
       <h1 className={featuredProductsText}>Featured Products/Services</h1>
       {/* <div style={{minHeight: "50vh"}}>background picture or featured content goes here</div> */}
