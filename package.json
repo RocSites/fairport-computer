@@ -36,7 +36,7 @@
     "gatsby-plugin-sharp": "^5.0.0",
     "gatsby-plugin-sitemap": "^6.0.0",
     "gatsby-source-filesystem": "^5.0.0",
-    "gatsby-source-shopify": "^8.0.0",
+    "gatsby-source-shopify": "^9.0.0",
     "gatsby-transformer-sharp": "^5.0.0",
     "isomorphic-fetch": "^3.0.0",
     "lodash.debounce": "^4.0.8",
@@ -47,7 +47,7 @@
     "react-google-recaptcha-v3": "^1.10.1",
     "react-helmet": "^6.1.0",
     "react-icons": "^4.1.0",
-    "shopify-buy": "^2.11.0",
+    "shopify-buy": "^3.0.0-rc.1",
     "urql": "^2.0.2"
   }
 }
