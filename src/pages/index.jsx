@@ -68,7 +68,7 @@ export default function IndexPage({ data }) {
     <Layout>
       <Hero />
       <div className={halloweenContestLinkWrapper}>
-        <h1 className={halloweenLinkHeaderText}>Black Friday Deals from 11/25-11/29</h1>
+        <h1 className={halloweenLinkHeaderText}>Happy Spring! Check out our sale items!</h1>
         {/* <Link className={emailPhotoLink} to="/halloweencontest">Click Here!</Link> */}
       </div>
       <h1 className={featuredProductsText}>Featured Products/Services</h1>
